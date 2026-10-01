@@ -16,6 +16,7 @@
 | Анализ патентов | ✅ | [patents/analysis.md](patents/analysis.md) |
 | Сравнительная таблица | ✅ | [literature/comparison_table.md](literature/comparison_table.md) |
 | Актуальность (черновик) | ✅ | [chapters/01_relevance.md](chapters/01_relevance.md) |
+| Глава 2. Патентный поиск | ✅ | [chapters/02_patent_search.md](chapters/02_patent_search.md), [chapters/02_patent_search.docx](chapters/02_patent_search.docx) |
 | BibTeX библиография (42) | ✅ | [literature/bibliography.bib](literature/bibliography.bib) |
 
 ## Структура репозитория
@@ -36,7 +37,8 @@ WIAIM/
 │   ├── patents_matrix.md
 │   └── analysis.md
 └── chapters/
-    └── 01_relevance.md
+    ├── 01_relevance.md
+    └── 02_patent_search.md
 ```
 
 ## Ключевые результаты
@@ -63,7 +65,7 @@ WIAIM/
 
 1. Углублённое чтение топ-5 источников из sources_usa.md
 2. Доступ к CNKI через вуз для полных текстов китайских статей
-3. Написание главы 2 «Обзор литературы» на основе comparison_table.md
+3. Написание главы 3 «Обзор литературы» на основе comparison_table.md (патентный поиск — отдельная глава 2)
 4. Опционально: экспериментальный benchmark 2–3 протоколов (ESP-NOW vs Wi-Fi vs LoRa)
 
 ## Вспомогательные источники (начальные)

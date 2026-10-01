@@ -2,6 +2,8 @@
 
 Дата: 2025-09-12. Основа: [patents_matrix.md](patents_matrix.md) (40 патентов).
 
+**Глава диссертации:** развёрнутый текст — [chapters/02_patent_search.md](../chapters/02_patent_search.md). Этот файл остаётся рабочей сводкой поиска.
+
 ## 1. География патентования
 
 ```mermaid
