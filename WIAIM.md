@@ -58,8 +58,8 @@ WIAIM/
 | ESP-NOW | Educational/research swarms |
 
 ### Патенты
-- **20 US** + **18 CN** + 2 PCT
-- Топ assignees: ABB, DJI, Siemens, Georgia Tech, Midea
+- **16 US** + **9 CN** (после сверки номеров 05.10.2026; три PCT — члены тех же семейств)
+- Заявители с двумя и более документами: ABB, Amazon, Fanuc, Ericsson, DJI
 
 ## Следующие шаги (рекомендации)
 

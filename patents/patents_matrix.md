@@ -1,90 +1,83 @@
-# Матрица патентов: беспроводная связь для управления роботом/роем
+# Матрица патентов: беспроводная связь для управления роботом и группой
 
-Дата поиска: 2025-09-12. Базы: Google Patents, USPTO, CNIPA/SooPat.  
-Объём: **40 патентов** (20 US, 18 CN, 2 WO/PCT).
+Первичная выборка: 2025-09-12. Сверка номера, заявителя и предмета: 2026-10-05, Google Patents.  
+В массив включены только документы, у которых номер публикации совпадает с заявителем и с предметом формулы. Заявка и выдача одного семейства считаются одним документом.
+
+Объём: **25 документов** (16 US, 9 CN). У трёх семейств есть отдельная публикация PCT; она не добавляется как второе изобретение.
 
 ## США (US)
 
 | # | Номер | Заявитель | Год | Технология | Суть изобретения | Связь с темой |
 |---|-------|-----------|-----|------------|------------------|---------------|
-| 1 | US10853084B2 | ABB Schweiz AG | 2020 | RF network | Координация роботов через RF-сеть, центральный диспетчер | Управление роя/группой роботов |
-| 2 | US12457179B2 | ABB Schweiz AG | 2025 | Wireless QoS | Control network for mobile robots: FMS, QoS forecasting | Промышленные мобильные роботы |
-| 3 | US12218824B2 | ABB Schweiz AG | 2024 | Wireless routing | Robust parallel routing over disjoint wireless paths | Надёжность связи робот-контроллер |
-| 4 | US11265798B2 | Siemens AG | 2022 | 5G/WiMAX/LTE | Radio communication for industrial automation, AGV + robots | Пром. автоматизация, группы устройств |
-| 5 | US10537996B2 | Georgia Tech | 2020 | Wireless swarm | Control of swarming robots, density function, wireless comm | Рой роботов |
-| 6 | US20170072565A1 | Georgia Tech | 2017 | Wireless | Swarming robots communicate wirelessly with built-in sensors | Рой, беспроводная координация |
-| 7 | US11383390B2 | Rios Intelligent Machines | 2022 | LAN/Wireless | Robotic work cell network, cloud + wireless interface | Роботизированная ячейка |
-| 8 | US12053873B2 | — | 2024 | BT mesh/Wi-Fi/ZigBee | Mesh network of reconfigurable 6-axis industrial robots | Mesh для пром. роботов |
-| 9 | US10583563B2 | — | 2020 | Wi-Fi/Cellular | Advanced communications in robotic systems, peer + external | Мультипротокольная связь |
-| 10 | US20200306988A1 | Rios Intelligent Machines | 2020 | Network | Robotic work cell cooperative interaction over network bus | Облачное управление роботами |
-| 11 | US10406936 | — (ICAR 2023 ref) | 2023 | 5G | 5G edge cloud-controlled robotic cell, MQTT/OPC UA | 5G + пром. робот |
-| 12 | US20200050206A1 | Cobalt Robotics | 2020 | Wireless | Automated route selection by mobile robot | Мобильный робот, маршрут |
-| 13 | US10238456B2 | Boston Dynamics | 2019 | Wireless | Legged robot wireless communication system | Беспроводной legged robot |
-| 14 | US10106656B2 | iRobot | 2018 | Wi-Fi/BT | Autonomous mobile robot wireless communication | Бытовой/сервисный робот |
-| 15 | US10059473B2 | Amazon | 2018 | Wireless mesh | Distributed robotic system with wireless mesh network | Распределённая система роботов |
-| 16 | US9955486B2 | Fanuc | 2018 | Wireless | Industrial robot with wireless interface for teaching pendant | Пром. робот, пульт |
-| 17 | US9915560B2 | KUKA | 2017 | WLAN | Method for operating robot system via wireless LAN | Пром. робот, WLAN |
-| 18 | US9889567B2 | ABB | 2018 | Wireless safety | Safety system for wireless controlled industrial robots | Безопасность беспроводного управления |
-| 19 | US9776766B2 | Universal Robots | 2017 | Wireless | Collaborative robot with wireless communication module | Кобот |
-| 20 | US10637582B2 | NVIDIA | 2020 | 5G/Wi-Fi | Autonomous machine wireless communication for AI inference | AI + беспроводная связь робота |
+| 1 | US10853084B2 | ABB Schweiz AG | 2020 | RF (зависимые пункты) | Координация ресурсов для локальной сервисной цели. Роботы, связанные радиосетью и перемещающие объекты, — зависимые пп. 8–9, не единственный объект формулы | Группа ресурсов; роботы — один из вариантов |
+| 2 | US12457179B2 | ABB Schweiz AG | 2025 | Wireless QoS | Сеть управления мобильными роботами: FMS планирует путь и запрашивает ресурс, NMS выдаёт прогноз QoS | Мобильные роботы и качество канала |
+| 3 | US12218824B2 | ABB Schweiz AG | 2025 | Wireless mesh | Параллельная передача одних и тех же пакетов по непересекающимся беспроводным путям с корреляцией помех не выше порога. Объект — терминал и узел системы управления, не мобильный робот как таковой | Надёжность критического беспроводного контура |
+| 4 | US11265798B2 | Siemens AG | 2022 | WLAN / LTE / 5G | Радиосистема промышленной автоматизации: базовая станция на транспортном средстве и абонентские станции, распределение частоты, полосы, времени и мощности. AGV и роботы в формуле не названы | Группа абонентов промышленной радиосети |
+| 5 | US10537996B2 | Georgia Tech Research Corp. | 2020 | Рой | Управление роем по временной плотностной функции и вектору смещения относительно соседа. Заявка US20170072565A1 и PCT WO2015171593A1 — то же семейство | Рой; обмен соседними измерениями |
+| 6 | US12053873B2 | Flexxbotics | 2024 | BT mesh / Wi-Fi / Zigbee / Thread | Mesh-контроллер реконфигурируемых промышленных роботов: маяки, выдача программы под задачу | Mesh цеховой группы роботов |
+| 7 | US11383390B2 | Rios Intelligent Machines | 2022 | LAN / облако | Сеть роботизированных ячеек: интерфейсный компьютер, облачный сервер, шина (LAN или Интернет), рассылка обновлений моделей. Заявка US20200306988A1 — то же семейство. Радиоинтерфейс предметом формулы не является | Облачный контур ячейки, не радиоканал |
+| 8 | US9902060B2 | Fanuc | 2018 | Беспроводной пульт | Критерий качества радиосвязи пульта меняется в зависимости от расстояния до машины; при ухудшении — предупреждение или останов | Безопасность беспроводного пульта |
+| 9 | US10031513B2 | Fanuc | 2018 | Беспроводной пульт | Беспроводной пульт обучения: изменение интервала периодической передачи в контроллер робота или станка | Пульт и контроллер |
+| 10 | US10491290B2 | Fanuc | 2019 | Беспроводной пульт | Контроллер принимает сигнал пульта напрямую и через ретранслятор | Устойчивость канала пульта |
+| 11 | US9981378B2 | KUKA Deutschland | 2018 | Провод / радио | Ручной орган управления: безопасная часть связана с контроллером по проводу или по радио; планшет может быть подключён по радио. Это не способ работы робота по WLAN | Пульт кобота, радио — допустимый вариант связи |
+| 12 | US12436527B2 | Ericsson | 2025 | Мобильная сеть, QoS | Команды контроллера роботу в облачной робототехнической системе отображаются на классы QoS по допуску Quality of Control | Классы критичности команд, не сенсорных данных |
+| 13 | US12464041B2 | Ericsson | 2025 | 5G / TSN | Интеграция 5G и TSN для промышленной автоматизации. Облачная робототехника и удалённое управление роботом разобраны как сценарии; формула — о потоках TSN через базовую станцию. PCT того же семейства: WO2020167222A2 | Детерминированный промышленный канал |
+| 14 | US10528061B2 | Amazon Technologies | 2020 | Ad hoc, Wi-Fi / BLE | Склад: мобильный привод подключается к локальной радиосети компонента и выполняет задание | Группа складских роботов |
+| 15 | US10735991B1 | Amazon Technologies | 2020 | Многоканальная радиосвязь | Снижение взаимных помех беспроводного управления плотно расставленных машин | Плотная группа машин |
+| 16 | US12456798B1 | Amazon Technologies | 2025 | Wi-Fi | Антенны в полу склада для связи с мобильными роботами, перевозящими стеллажи | Канал склада, в том числе команды останова |
 
 ## Китай (CN)
 
 | # | Номер | Заявитель | Год | Технология | Суть изобретения | Связь с темой |
 |---|-------|-----------|-----|------------|------------------|---------------|
-| 21 | CN110799919A | DJI Technology | 2020 | Wi-Fi/BT/ZigBee/5G | Модульный пульт: смена comm-модулей (2G–5G) | Мобильный робот, модульность |
-| 22 | CN110636102B | Tianyu Jingwei | 2022 | 4G/5G | UAV communication via base station + IDC + terminal | БПЛА, сотовая связь |
-| 23 | CN109048922A | — | 2019 | LoRa | Industrial robot management via LoRa gateway + cloud | LoRa + пром. робот |
-| 24 | CN112015120B | — | 2021 | Wi-Fi | Bus-type industrial robot control with WiFi | Wi-Fi пром. управление |
-| 25 | CN112771476A | Midea Group | 2021 | Wireless remote | Remote robot control method and system | Удалённое управление |
-| 26 | CN110743581A | — | 2021 | Wireless delay | Multi mobile robot formation considering comm delay | Формация + задержка |
-| 27 | CN108475068A | DJI Technology | 2018 | ADS-B/Wireless | UAV flight control via ADS-B receiver | БПЛА, безопасность |
-| 28 | CN111259847A | Huawei | 2020 | Wireless/AI | Robot control method, gaze tracking (机器人控制) | Huawei robotics |
-| 29 | CN112926847A | — | 2021 | 5G | 5G-based multi-robot collaborative control system | 5G + multi-robot |
-| 30 | CN113421456A | — | 2021 | LoRaWAN | LoRaWAN-based robot monitoring and control platform | LoRaWAN IoT robot |
-| 31 | CN114567890A | — | 2022 | Wi-Fi 6 | WiFi6 industrial robot wireless communication module | Wi-Fi 6 пром. |
-| 32 | CN115678901A | — | 2023 | BLE mesh | Bluetooth mesh network for robot swarm coordination | BLE mesh рой |
-| 33 | CN116789012A | — | 2023 | UWB | UWB positioning and communication for robot swarm | UWB рой (Tsinghua trend) |
-| 34 | CN117890123A | — | 2024 | ZigBee | ZigBee-based wireless sensor network for robot control | ZigBee робот |
-| 35 | CN118901234A | — | 2024 | 5G URLLC | 5G URLLC low-latency robot arm control system | 5G URLLC манипулятор |
-| 36 | CN109876543A | Siasun | 2019 | Wireless | AGV wireless communication scheduling method | AGV, планирование |
-| 37 | CN110987654A | Estun Automation | 2020 | Wi-Fi | Industrial robot wireless teaching and debugging system | Пром. робот, отладка |
-| 38 | CN111876543A | HIT (Harbin) | 2020 | Multi-hop | Multi-hop wireless communication for robot swarm | Multi-hop рой |
+| 17 | CN110799919A | SZ DJI Technology | 2020 | Сменные модули | Пульт мобильного робота: ядро переключается между модулями Wi-Fi, Bluetooth, ZigBee и сотовой связи | Смена профиля канала без смены механики |
+| 18 | CN108475068A | SZ DJI Technology | 2018 | ADS-B | Управление полётом БПЛА по данным бортового приёмника ADS-B. PCT того же семейства: WO2019033256A1 | БПЛА и внешний радиоконтур, не рой |
+| 19 | CN110636102B | Tianyu Jingwei (Beijing) | 2022 | 4G / 5G | Несколько БПЛА связаны с базовыми станциями; дальше — оптоволокно в IDC и терминал пользователя | Сотовая связь группы БПЛА |
+| 20 | CN109048922A | Henan Huina Technology | 2019 | LoRa | Промышленный робот через шлюз LoRa и базовую станцию связан с облачным сервером | LoRa и облако для одного робота |
+| 21 | CN112015120B | Jiangsu Security Technology Career Academy | 2021 | Wi-Fi | Шинная система управления промышленным роботом с модулем Wi-Fi. К LoRa и сменным модулям 2G–5G документ не относится | Wi-Fi в контуре промышленного робота |
+| 22 | CN112771476A | Midea Group | 2021 | Удалённый контур | Удалённое управление роботом с учётом задержки канала | Задержка удалённого контура |
+| 23 | CN112833876B | Southwest University of Science and Technology | 2022 | UWB | Совместная локализация нескольких роботов: дальности UWB и одометрия, оптимизация графа поз | Группа, обмен дальностями |
+| 24 | CN114967730A | Dalian Maritime University | 2022 | UWB + радиомодем | Морской и воздушный безэкипажный кластер: UWB-позиции и сеть радиомодемов до наземной станции | Группа и радиоканал |
+| 25 | CN115825862A | Chongqing Zhixiang Paving Technology | 2023 | UWB | Распределённая локализация и управление строем: роботы обмениваются дальностями UWB с соседями | Строй и межроботный обмен |
 
-## Международные (WO/PCT)
+## Публикации PCT тех же семейств
 
-| # | Номер | Заявитель | Год | Технология | Суть | Связь |
-|---|-------|-----------|-----|------------|------|-------|
-| 39 | WO2019033256A1 | DJI Technology | 2019 | ADS-B | UAV flight control based on ADS-B receiver | БПЛА |
-| 40 | WO2020123456A1 | ABB | 2020 | 5G/Wi-Fi | Wireless communication for mobile manipulators in factory | Пром. мобильные манипуляторы |
+| Семейство | Национальный документ | PCT |
+|-----------|----------------------|-----|
+| Рой Georgia Tech | US10537996B2 | WO2015171593A1 |
+| БПЛА DJI, ADS-B | CN108475068A | WO2019033256A1 |
+| 5G и TSN, Ericsson | US12464041B2 | WO2020167222A2 |
 
 ## Статистика по технологиям
 
+Один документ может входить в несколько строк.
+
 | Технология | US | CN | Всего |
 |------------|----|----|-------|
-| 5G/Cellular | 4 | 5 | 9 |
-| Wi-Fi/WLAN | 6 | 5 | 11 |
-| LoRa/LoRaWAN | 0 | 3 | 3 |
-| Bluetooth/BLE | 2 | 2 | 4 |
-| ZigBee/Mesh | 2 | 2 | 4 |
-| Multi-protocol | 4 | 4 | 8 |
-| Swarm-specific | 3 | 4 | 7 |
-| UWB/Other | 1 | 1 | 2 |
+| Wi-Fi / WLAN | 3 | 2 | 5 |
+| 5G / сотовая связь | 3 | 2 | 5 |
+| Несколько протоколов в одной формуле | 3 | 1 | 4 |
+| Рой или группа роботов | 2 | 3 | 5 |
+| Bluetooth / BLE | 2 | 1 | 3 |
+| Mesh | 2 | 1 | 3 |
+| LoRa | 0 | 1 | 1 |
+| UWB | 0 | 3 | 3 |
+| Беспроводной пульт | 4 | 0 | 4 |
 
-## Топ-10 патентообладателей
+## Заявители с двумя и более документами
 
 | Заявитель | Кол-во | Регион | Фокус |
 |-----------|--------|--------|-------|
-| ABB Schweiz AG | 5 | US/EU | Mobile robots, QoS, routing |
-| DJI Technology | 4 | CN | UAV, modular comm, ADS-B |
-| Siemens AG | 1 | US/EU | Industrial 5G automation |
-| Georgia Tech | 2 | US | Swarm control |
-| Rios Intelligent Machines | 2 | US | Work cell network |
-| Midea Group | 1 | CN | Remote robot control |
-| Huawei | 1 | CN | Robot control AI |
-| Fanuc / KUKA / UR | 3 | US/JP | Industrial robot wireless |
-| — (Chinese IoT startups) | 8+ | CN | LoRa, Wi-Fi, 5G platforms |
+| ABB Schweiz AG | 3 | US / EU | Ресурсы и RF, QoS мобильных роботов, mesh критического контура |
+| Amazon Technologies | 3 | US | Складские мобильные роботы |
+| Fanuc | 3 | JP / US | Беспроводной пульт |
+| Ericsson | 2 | EU / US | 5G/TSN; классы QoS команд робота |
+| DJI Technology | 2 | CN | Сменный модуль пульта; ADS-B БПЛА |
 
-## Примечание
+## Исключены при сверке
 
-Патенты CN115678901A – CN118901234A (строки 32–35) идентифицированы по паттернам заявок в Google Patents/SooPat; при оформлении диссертации рекомендуется верифицировать номера через [patents.google.com](https://patents.google.com) или CNIPA.
+Номер не совпал с заявленными заявителем и предметом либо не подтверждён как такой документ. В главу и в статистику они не входят:
+
+US9889567B2, US9955486B2, US9915560B2, US9776766B2, US10637582B2, US10583563B2, US10406936, US20200050206A1, US10238456B2, US10106656B2, US10059473B2, CN110743581A, CN111259847A, CN112926847A, CN113421456A, CN114567890A, CN115678901A, CN116789012A, CN117890123A, CN118901234A, CN109876543A, CN110987654A, CN111876543A, WO2020123456A1.
+
+US20170072565A1 и US20200306988A1 не исключены как ложные номера: это заявки семейств US10537996B2 и US11383390B2.
