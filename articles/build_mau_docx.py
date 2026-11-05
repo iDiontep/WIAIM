@@ -697,7 +697,12 @@ def write_markdown(abstract_ru, abstract_en):
         "Пересобрать Word:\n\n"
         "```\npython articles/generate_figures.py\npython articles/build_mau_docx.py\n```\n\n"
         f"Аннотация (RU): {word_count(abstract_ru)} слов; "
-        f"(EN): {word_count(abstract_en)} слов.\n",
+        f"(EN): {word_count(abstract_en)} слов.\n\n"
+        "## Обзор по коленному модулю\n\n"
+        "- Word: [knee_emg_patent_review.docx](knee_emg_patent_review.docx)\n"
+        "- Текст: [knee_emg_patent_review.md](knee_emg_patent_review.md)\n\n"
+        "Пересобрать Word:\n\n"
+        "```\npython articles/build_knee_article_docx.py\n```\n",
         encoding="utf-8",
     )
 
